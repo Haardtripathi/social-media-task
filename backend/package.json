@@ -1,0 +1,30 @@
+{
+  "name": "social-media-task-screen",
+  "version": "1.0.0",
+  "description": "Internship task for backend proj2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Haard Tripathi",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cloudinary": "^1.41.3",
+    "connect-mongodb-session": "^5.0.0",
+    "cors": "^2.8.5",
+    "csrf": "^3.1.0",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.1",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemon": "^3.1.7",
+    "social-media-task-screen": "file:"
+  }
+}
