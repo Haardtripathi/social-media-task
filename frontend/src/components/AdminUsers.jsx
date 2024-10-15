@@ -51,7 +51,7 @@ const AdminUsers = () => {
                     {users.map(user => (
                         <tr key={user._id} className="hover:bg-gray-50">
                             <td className="border border-gray-300 p-4">{user.fullName}</td>
-                            <td className="border border-gray-300 p-4">{user.socialMediaHandle}</td>
+                            <td className="border border-gray-300 p-4">https://www.instagram.com/{user.socialMediaHandle}/</td>
                             <td className="border border-gray-300 p-4">
                                 <div className="flex flex-wrap">
                                     {user.uploadedImages.map((image, index) => (
