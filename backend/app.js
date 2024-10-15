@@ -12,7 +12,7 @@ const adminRoutes = require("./routes/admin")
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Allow only your frontend
+    origin: 'https://social-media-task-2.netlify.app', // Allow only your frontend
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
