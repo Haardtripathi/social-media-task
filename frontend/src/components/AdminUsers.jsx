@@ -51,7 +51,21 @@ const AdminUsers = () => {
                     {users.map(user => (
                         <tr key={user._id} className="hover:bg-gray-50">
                             <td className="border border-gray-300 p-4">{user.fullName}</td>
-                            <td className="border border-gray-300 p-4"><a href="http://https://www.instagram.com/<%= {user.socialMediaHandle}/ %>/">{user.socialMediaHandle}/</a></td>
+                            <td className="border border-gray-300 p-4">
+                                <a
+                                    href={`https://www.instagram.com/${user.socialMediaHandle}/`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center space-x-2"
+                                >
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                        alt="Instagram Logo"
+                                        className="w-5 h-5"
+                                    />
+                                    <span>{user.socialMediaHandle}</span>
+                                </a>
+                            </td>
                             <td className="border border-gray-300 p-4">
                                 <div className="flex flex-wrap">
                                     {user.uploadedImages.map((image, index) => (
