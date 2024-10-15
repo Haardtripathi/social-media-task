@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Set the base URL based on the environment
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://social-media-task-25pw.onrender.com";
 
 // Create an instance of axios
 const axiosInstance = axios.create({
