@@ -51,9 +51,10 @@ const AdminUsers = () => {
                     {users.map(user => (
                         <tr key={user._id} className="hover:bg-gray-50">
                             <td className="border border-gray-300 p-4">{user.fullName}</td>
+                            <td className="border border-gray-300 p-4">{user.fullName}</td>
                             <td className="border border-gray-300 p-4">
                                 <a
-                                    href={`https://www.instagram.com/${user.socialMediaHandle}/`}
+                                    href={`https://www.instagram.com/${user.socialMediaHandle.replace('@', '')}/`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center space-x-2"
@@ -63,7 +64,7 @@ const AdminUsers = () => {
                                         alt="Instagram Logo"
                                         className="w-5 h-5"
                                     />
-                                    <span>{user.socialMediaHandle}</span>
+                                    <span>{user.socialMediaHandle.replace('@', '')}</span> {/* Display handle without @ */}
                                 </a>
                             </td>
                             <td className="border border-gray-300 p-4">

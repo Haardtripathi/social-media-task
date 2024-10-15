@@ -1,7 +1,7 @@
 // UserUpload.js
 import React, { useState } from 'react';
 import axios from '../axiosConfig.js';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const UserUpload = () => {
     const [fullName, setFullName] = useState('');
@@ -28,7 +28,11 @@ const UserUpload = () => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('fullName', fullName);
-        formData.append('socialMediaHandle', socialMediaHandle);
+
+        // Remove "@" from the social media handle before saving to the database
+        const sanitizedSocialMediaHandle = socialMediaHandle.replace('@', '');
+        formData.append('socialMediaHandle', sanitizedSocialMediaHandle);
+
         for (let i = 0; i < images.length; i++) {
             formData.append('images', images[i]);
         }
@@ -61,11 +65,14 @@ const UserUpload = () => {
                     />
                 </div>
                 <div className="mb-4">
-                    <label className="block text-sm font-medium text-gray-700">Social Media Handle:</label>
+                    <label className="block text-sm font-medium text-gray-700">
+                        Social Media Handle: <span className="text-gray-500">(without @)</span>
+                    </label>
                     <input
                         type="text"
                         value={socialMediaHandle}
                         onChange={(e) => setSocialMediaHandle(e.target.value)}
+                        placeholder="@"
                         required
                         className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
                     />
