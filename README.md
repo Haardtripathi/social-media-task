@@ -5,13 +5,6 @@ A full-stack application for uploading and managing user data, including images 
 
 ## Table of Contents
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Routes](#routes)
-- [Middleware](#middleware)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Technologies Used
 - **Frontend**: React, React Router, Axios, Tailwind CSS
