@@ -66,7 +66,7 @@ const UserUpload = () => {
                 </div>
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-700">
-                        Social Media Handle: <span className="text-gray-500">(without @)</span>
+                        Social Media Handle: <span className="text-gray-500">(Instagram handle)</span>
                     </label>
                     <input
                         type="text"
